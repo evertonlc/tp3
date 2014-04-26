@@ -5,7 +5,7 @@ import java.util.LinkedList;
 public class Caminho implements Cloneable {
 	private LinkedList<Integer> nodosLista;
 
-	// Indica se o caminho ou n„o pode ser extendido, seja por encontrar um nodo final ou situaÁ„o de loop
+	// Indica se o caminho ou n√£o pode ser extendido, seja por encontrar um nodo final ou situa√ß√£o de loop
 	private Boolean extensivel;
 
 	public Caminho(LinkedList<Integer> nodosLista, Boolean extensivel) {
@@ -32,7 +32,7 @@ public class Caminho implements Cloneable {
 
 	@Override
 	public String toString() {
-		return "Caminho " + nodosLista + ", extensivel=" + extensivel + "]";
+		return "Caminho " + nodosLista ;
 	}
 
 	@Override

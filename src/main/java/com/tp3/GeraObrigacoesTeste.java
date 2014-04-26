@@ -16,9 +16,9 @@ public class GeraObrigacoesTeste {
 	public static void geraObrigacaoNodos(Grafo grafo) {
 		/*
 		 * TODO 
-		 * O conjunto de teste T satisfaz o critÈrio
+		 * O conjunto de teste T satisfaz o crit√©rio
 		 * de cobertura de nodos em um grafo G se somente se para
-		 * cada nodo n sintaticamente alcanÁ·vel syntactically em N,
+		 * cada nodo n sintaticamente alcan√ß√°vel sintaticamente em N,
 		 * existe algum caminho p em caminhos(T) tal que p visita n.
 		 */
 	}
@@ -30,7 +30,7 @@ public class GeraObrigacoesTeste {
 	public static void geraObrigacaoArcos(Grafo grafo) {
 		/*
 		 * TODO 
-		 * TR contÈm cada caminho de tamanho m·ximo 1, inclusive, alcanÁ·vel em G.
+		 * TR cont√©m cada caminho de tamanho m√°ximo 1, inclusive, alcan√ß√°vel em G.
 		 */
 	}
 
@@ -50,7 +50,7 @@ public class GeraObrigacoesTeste {
 			caminhosEstensiveis.add(new Caminho(caminho, !grafo.getNodosFinais().contains(nodo)));
 		}
 
-		//Agora comeÁa a gerar os caminhos simples
+		//Agora come√ßa a gerar os caminhos simples
 		while (!caminhosEstensiveis.isEmpty()) {
 			Caminho caminho = caminhosEstensiveis.get(0);
 			if(caminho.isExtensivel()) {
@@ -79,18 +79,18 @@ public class GeraObrigacoesTeste {
 		try {
 			novoCaminho = (Caminho)caminho.clone();
 			Boolean inserir = Boolean.TRUE;
-			//Testa se o nodo para onde estamos tenantado estender j· est· no caminho
+			//Testa se o nodo para onde estamos tenantado estender j√° est√° no caminho
 			if(novoCaminho.getNodosLista().contains(arco.getFimArco())) {
-				//Se est·, j· sabemos que o caminho n„o È estensÌvel
+				//Se est√°, j√° sabemos que o caminho n√£o √© estens√≠vel
 				novoCaminho.setExtensivel(Boolean.FALSE);
-				//Se o nodo n„o o primeiro, signigica um loop interno, logo, n„o deve inserir na lista de caminhos
+				//Se o nodo n√£o o primeiro, signigica um loop interno, logo, n√£o deve inserir na lista de caminhos
 				if(!novoCaminho.getNodosLista().getFirst().equals(arco.getFimArco())) {
 					inserir = Boolean.FALSE;
 				}
 			}
 			
 			if(inserir) {
-				//Se È um caminho que leva a um final de arco, n„o pode ser removido
+				//Se ÔøΩ um caminho que leva a um final de arco, nÔøΩo pode ser removido
 				if(nodosFinais.contains(arco.getFimArco())) {
 					novoCaminho.setExtensivel(Boolean.FALSE);
 				}
@@ -131,9 +131,9 @@ public class GeraObrigacoesTeste {
 	}
 	
 	/**
-	 * Busca os arcos do grafo cuja origem È o nodo
+	 * Busca os arcos do grafo cuja origem ÔøΩ o nodo
 	 * @param nodo Inteiro para ser pesquisado
-	 * @param grafo Grafo que contÈm as informaÁıes dos arcos
+	 * @param grafo Grafo que cont√©m as informa√ß√µes dos arcos
 	 * @return
 	 */
 	public static List<Arco> buscaArcosOrigemNodo(Integer nodo, Grafo grafo) {
@@ -161,7 +161,7 @@ public class GeraObrigacoesTeste {
 	}
 	
 	/**
-	 * Verifica se o caminho da origem È subcaminho do destino
+	 * Verifica se o caminho da origem √© subcaminho do destino
 	 * @param origem
 	 * @param destino
 	 */
